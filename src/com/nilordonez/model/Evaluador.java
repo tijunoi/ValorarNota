@@ -1,4 +1,4 @@
-package com.nilordonez;
+package com.nilordonez.model;
 
 public class Evaluador {
     private float nota;

@@ -1,16 +1,16 @@
-package com.nilordonez;
+package com.nilordonez.view;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class EvaluadorView extends JFrame {
-    JButton btOk, btCancel;
-    JLabel resultado;
-    JTextField tfUserInput;
+    private JButton btOk, btCancel;
+    private JLabel resultado;
+    private JTextField tfUserInput;
 
     public EvaluadorView() {
         this.setTitle("Evaluación de notas");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         addComponentsToPane(this.getContentPane());
 
@@ -31,7 +31,21 @@ public class EvaluadorView extends JFrame {
 
         resultado = new JLabel("RESULTADO:");
         contentPane.add(resultado,BorderLayout.SOUTH);
+    }
 
+    public JButton getBtOk() {
+        return btOk;
+    }
 
+    public JButton getBtCancel() {
+        return btCancel;
+    }
+
+    public JLabel getResultado() {
+        return resultado;
+    }
+
+    public JTextField getTfUserInput() {
+        return tfUserInput;
     }
 }
